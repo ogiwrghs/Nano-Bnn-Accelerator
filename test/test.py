@@ -14,7 +14,7 @@ async def test_project(dut):
     # the clock runs at 50MHz, and it resets safely without X-states.
 
     # 50 MHz clock
-    clock = Clock(dut.clk, 20, units="ns")
+    clock = Clock(dut.clk, 20, unit="ns")
     cocotb.start_soon(clock.start())
 
     # ground inputs to prevent floating wires during gate-level sim
