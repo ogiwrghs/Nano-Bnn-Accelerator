@@ -31,8 +31,8 @@ module tb ();
   tt_um_vmm_bnn user_project (
       // Include power ports for the Gate Level test:
 `ifdef GL_TEST
-      .VPWR(1'b1),
-      .VGND(1'b0),
+      .VPWR(VPWR),
+      .VGND(VGND),
 `endif
       .ui_in  (ui_in),
       .uo_out (uo_out),
